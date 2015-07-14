@@ -166,7 +166,7 @@ public class RegisterActivity extends Activity implements OnClickListener, OnIte
 		// アルバムボタン作成
 		holder.albamButton = new Button(this);
 		holder.albamButton.setBackground(ButtonFactory.getButtonDrawable(this, R.drawable.album_image));
-		holder.albamButton.setId(RegisterActivity.ALBAM_BUTTON);
+		holder.albamButton.setId(ALBAM_BUTTON);
 		holder.albamButton.setOnClickListener(this);
 		params = new RelativeLayout.LayoutParams(buttonSize, buttonSize);
 		params.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
@@ -388,37 +388,39 @@ public class RegisterActivity extends Activity implements OnClickListener, OnIte
 		// ** ローカル変数の初期化 **
 		Intent intent = new Intent();		// インテント
 		File dir = null;							// 保存先ファイル
-		
+
 		ViewHolder holder = (ViewHolder) registerLayout.getTag();
 		switch(v.getId()){
 		case ALBAM_BUTTON:		// == アルバム読み込みモード ==
 			// 結果を呼び出しもとActivityに返す
-			
+
 			// Activityを終了
 			finish();
 			break;
-			
+
 		case PHOTO_BUTTON:		// == 写真撮影モード ==
 			// ** 保存先を作成 **
 			String fileName = "" + System.currentTimeMillis() + ".jpg";
             mediaFile = new File(getExternalFilesDir(Environment.DIRECTORY_PICTURES), fileName);
 			Uri imageUri = Uri.fromFile(mediaFile);
-			
-			// ** 写真撮影用の暗黙インテントを呼び出す準備 **
-			intent.setAction(MediaStore.ACTION_IMAGE_CAPTURE);
-			intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
-			intent.addCategory(Intent.CATEGORY_DEFAULT);
-			
-			// インテントを呼び出す
-			startActivityForResult(intent, IMAGE_CAPTUER);
+
+			CameraSample cs = new CameraSample(imageUri);
+
+//			// ** 写真撮影用の暗黙インテントを呼び出す準備 **
+//			intent.setAction(MediaStore.ACTION_IMAGE_CAPTURE);
+//			intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
+//			intent.addCategory(Intent.CATEGORY_DEFAULT);
+//
+//			// インテントを呼び出す
+//			startActivityForResult(intent, IMAGE_CAPTUER);
 			break;
-			
+
 		case MOVIE_BUTTON:		// == 動画撮影モード ==
 			// ** 保存先を作成 **
 			fileName = "" + System.currentTimeMillis() + ".mp4";
             mediaFile = new File(getExternalFilesDir(Environment.DIRECTORY_MOVIES), fileName);
 			Uri movieUri = Uri.fromFile(mediaFile);
-			
+
 			// ** 動画撮影用の暗黙院展とを呼び出す準備 **
 			intent.setAction(MediaStore.ACTION_VIDEO_CAPTURE);
 			intent.putExtra(MediaStore.EXTRA_OUTPUT, movieUri);
@@ -426,17 +428,17 @@ public class RegisterActivity extends Activity implements OnClickListener, OnIte
 			intent.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, MOVIE_QUALITY);
 			// 動画の最大撮影時間を設定
 			intent.putExtra(MediaStore.EXTRA_DURATION_LIMIT, MOVIE_MAX_TIME);
-			
+
 			// インテントを呼び出す
 			startActivityForResult(intent, MOVIE_CAPTUER);
 			break;
-			
+
 		//*** 入力データを登録する ***
 		case REGIST_BUTTON:
 			// 基本値をセットする
 			String name = holder.nameTextView.getText().toString();
 			String description = holder.discriptionTextView.getText().toString();
-			
+
 			SQLiteDatabase db = dbAdapter.openDb();
 
 			boolean success = false;
@@ -522,7 +524,7 @@ public class RegisterActivity extends Activity implements OnClickListener, OnIte
 
 			db.close();
 			finish();
-	
+
 			break;
 		case RETURN_BUTTON:
 			finish();
@@ -534,14 +536,14 @@ public class RegisterActivity extends Activity implements OnClickListener, OnIte
 		}
 	}
 
-	/* 
+	/*
 	 *
 	 * (非 Javadoc)
 	 * @see android.app.Activity#onActivityResult(int, int, android.content.Intent)
 	 */
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		
+
 		// インテントからの返信が成功した場合
 		if(resultCode == RESULT_OK){
 			SQLiteDatabase db = dbAdapter.openDb();
@@ -588,7 +590,7 @@ public class RegisterActivity extends Activity implements OnClickListener, OnIte
         }
 	}
 
-	
+
 	/*
 	 *  viewerアイテムがクリックされたときに呼び出される
 	 *  (非 Javadoc)
@@ -631,19 +633,19 @@ public class RegisterActivity extends Activity implements OnClickListener, OnIte
             db.close();
         }
     }
-	
+
 	/*
 	void putNewModeButtons(){
 		RelativeLayout.LayoutParams params;
-		
+
 		params = new RelativeLayout.LayoutParams(200,200);
-		
+
 	}
 	*/
-	
+
 	private int[] getImageTypes(int photo, int movie){
 		int[] types = new int[photo + movie];
-		
+
 		for(int i=0; i<types.length; i++){
 			if(i < photo){
 				types[i] = PICTURE;
@@ -651,13 +653,13 @@ public class RegisterActivity extends Activity implements OnClickListener, OnIte
 				types[i] = MOVIE;
 			}
 		}
-		
+
 		return types;
 	}
-	
+
 	private String[] getImagePaths(String[] photo, String[] movie){
 		String[] paths = new String[photo.length + movie.length];
-		
+
 		for(int i=0; i<paths.length; i++){
 			if(i<photo.length){
 				paths[i] = photo[i];
@@ -665,10 +667,10 @@ public class RegisterActivity extends Activity implements OnClickListener, OnIte
 				paths[i] = movie[i-photo.length];
 			}
 		}
-		
+
 		return paths;
 	}
-	
+
 	class ViewHolder{
 		VTextView nameTextView;
 		VTextView discriptionTextView;
