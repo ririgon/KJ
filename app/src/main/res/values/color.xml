@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="default_main">#f6ca</color>
+    <color name="default_base">#fffc</color>
+    <color name="default_accent">#ffa3</color>
+    
+    <color name="summer_main">#ff0077ff</color>
+    <color name="summer_base">#feff</color>
+    <color name="summer_accent">#ffffee47</color>
+
+    <color name="autumn_main">#ffff5500</color>
+    <color name="autumn_base">#ffc8</color>
+    <color name="autumn_accent">#f8cf</color>
+
+    <color name="gorst_main">#ff002255</color>
+    <color name="gorst_base">#ff544a82</color>
+    <color name="gorst_accent">#ffc8</color>  
+
+    <color name="heart_main">#f6ca</color>
+    <color name="heart_base">#fffc</color>
+    <color name="heart_accent">#ffa3</color>
+
+    <color name="star_main">#f6ca</color>
+    <color name="star_base">#fffc</color>
+    <color name="star_accent">#ffa3</color>      
+
+    <color name="base_click">#f9a6</color>
+    <color name="button_text">#f397</color>
+    <color name="dummy">#faaa</color>
+    <color name="white">#ffff</color>
+    <color name="focuse">#fffd</color>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="false">
+		<shape android:shape="rectangle">
+			<stroke 
+		  	    android:color="@color/default_main"
+		  	    android:width="2dp"/>
+		  	<solid 
+		  	    android:color="@color/white"/>
+		    <corners 
+		        android:bottomRightRadius="5dp"
+		    	android:bottomLeftRadius="5dp"  
+		    	android:topRightRadius="5dp"
+		    	android:topLeftRadius="5dp"
+		    />   
+		</shape>
+	</item>
+	<item android:state_focused="true">
+		<shape android:shape="rectangle">
+			<stroke 
+		  	    android:color="@color/default_main"
+		  	    android:width="2dp"/>
+		  	<solid 
+		  	    android:color="@color/focuse"/>
+		    <corners 
+		        android:bottomRightRadius="5dp"
+		    	android:bottomLeftRadius="5dp"  
+		    	android:topRightRadius="5dp"
+		    	android:topLeftRadius="5dp"
+		    />   
+		</shape>
+	</item>
+</selector><!-- From: file:/C:/Users/Lily/AndroidstudioProjects/Sawara/app/src/main/res/drawable/vtext_back.xml -->

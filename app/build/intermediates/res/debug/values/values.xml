@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/C:/Users/Lily/AndroidstudioProjects/Sawara/app/src/main/res/values/color.xml -->
+    <eat-comment/>
+    <color name="autumn_accent">#f8cf</color>
+    <color name="autumn_base">#ffc8</color>
+    <color name="autumn_main">#ffff5500</color>
+    <color name="base_click">#f9a6</color>
+    <color name="button_text">#f397</color>
+    <color name="default_accent">#ffa3</color>
+    <color name="default_base">#fffc</color>
+    <color name="default_main">#f6ca</color>
+    <color name="dummy">#faaa</color>
+    <color name="focuse">#fffd</color>
+    <color name="gorst_accent">#ffc8</color>
+    <color name="gorst_base">#ff544a82</color>
+    <color name="gorst_main">#ff002255</color>
+    <color name="heart_accent">#ffa3</color>
+    <color name="heart_base">#fffc</color>
+    <color name="heart_main">#f6ca</color>
+    <color name="star_accent">#ffa3</color>
+    <color name="star_base">#fffc</color>
+    <color name="star_main">#f6ca</color>
+    <color name="summer_accent">#ffffee47</color>
+    <color name="summer_base">#feff</color>
+    <color name="summer_main">#ff0077ff</color>
+    <color name="white">#ffff</color>
+    <declare-styleable name="KJTheme"><attr format="color" name="mainColor"/><attr format="color" name="baseColor"/><attr format="color" name="accentColor"/><attr format="reference" name="mainBack"/><attr format="reference" name="frameBack"/></declare-styleable>
+    <!-- From: file:/C:/Users/Lily/AndroidstudioProjects/Sawara/app/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="button_text_size">20dp</dimen>
+    <dimen name="label_text_size">20dp</dimen>
+    <dimen name="small_padding">5dp</dimen>
+    <dimen name="title_text_size">30dp</dimen>
+    <!-- From: file:/C:/Users/Lily/AndroidstudioProjects/Sawara/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="action_settings">せってい</string>
+    <string name="app_name">ぼくの、わたしの言葉事典</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="input_by_voice">こえでにゅうりょく</string>
+    <string name="new_button">しんき</string>
+    <string name="register">とうろく</string>
+    <string name="register_button_text">とうろくする</string>
+    <string name="return_button">もどる</string>
+    <string name="search_button_text">さがす</string>
+    <string name="search_picture">しゃしんをさがす</string>
+    <string name="setting_button">せってい</string>
+    <string name="take_movie_button_text">動画を撮る</string>
+    <string name="take_picture">しゃしんをとる</string>
+    <string name="title_activity_item">ItemActivity</string>
+    <string name="title_activity_search">さがす</string>
+    <string name="title_activity_setting">SettingActivity</string>
+    <string name="update_button">こうしん</string>
+    <string name="what_is_this">これはなに？</string>
+    <!-- From: file:/C:/Users/Lily/AndroidstudioProjects/Sawara/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="AppBaseTheme" parent="@android:style/Theme.Holo.Light">
+		<item name="android:button">@style/sawaraButton</item>
+    </style>
+    <style name="AppTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:background">@style/sawaraButton</item>
+    </style>
+    <style name="AutumnTheme">
+        <item name="mainColor">@color/autumn_main</item> 
+        <item name="baseColor">@color/autumn_base</item>
+        <item name="accentColor">@color/autumn_accent</item>
+        <item name="mainBack">@drawable/theme_autumn_back</item>
+        <item name="frameBack">@drawable/theme_autumn_frame</item>
+    </style>
+    <style name="DefaultTheme">
+        <item name="mainColor">@color/default_main</item> 
+        <item name="baseColor">@color/default_base</item>
+        <item name="accentColor">@color/default_accent</item>
+        <item name="mainBack">@color/default_base</item>
+        <item name="frameBack">@drawable/theme_default_frame</item>
+    </style>
+    <style name="GorstTheme">
+        <item name="mainColor">@color/gorst_main</item> 
+        <item name="baseColor">@color/gorst_base</item>
+        <item name="accentColor">@color/gorst_accent</item>
+        <item name="mainBack">@drawable/theme_gorst_back_image</item>
+        <item name="frameBack">@drawable/theme_koumori_frame</item>
+    </style>
+    <style name="HeartTheme">
+        <item name="mainColor">@color/heart_main</item> 
+        <item name="baseColor">@color/heart_base</item>
+        <item name="accentColor">@color/heart_accent</item>
+        <item name="mainBack">@drawable/theme_heart_back_image</item>   
+        <item name="frameBack">@drawable/theme_heart_frame</item>
+    </style>
+    <style name="StarTheme">
+        <item name="mainColor">@color/star_main</item> 
+        <item name="baseColor">@color/star_base</item>
+        <item name="accentColor">@color/star_accent</item>
+        <item name="mainBack">@drawable/theme_star_back_image</item>
+        <item name="frameBack">@drawable/theme_default_frame</item>
+    </style>
+    <style name="SummerTheme">
+        <item name="mainColor">@color/summer_main</item> 
+        <item name="baseColor">@color/summer_base</item>
+        <item name="accentColor">@color/summer_accent</item>
+        <item name="mainBack">@drawable/theme_summer_back</item>
+        <item name="frameBack">@drawable/theme_yotto_frame</item>
+    </style>
+    <style name="sawaraButton">
+        <item name="android:background">@drawable/new_button_image</item>
+        <item name="android:textColor">@color/button_text</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_margin">5dp</item>
+    </style>
+</resources>
