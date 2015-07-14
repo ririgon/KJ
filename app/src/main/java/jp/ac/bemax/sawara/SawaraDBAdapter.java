@@ -119,13 +119,23 @@ public class SawaraDBAdapter{
                         " unique (category_id, article_id))";    // ユニーク制約条件
                 db.execSQL(sql);
 
+                sql = "create table tag " +
+                        "(id integer unique," +        // カテゴリID
+                        " tag_id integer unique not null," +        // アーティクルID
+                        " media_id integer unique not null)";    // ユニーク制約条件
+                db.execSQL(sql);
+
                 // メディアテーブルの新規作成
                 sql = "create table media_table " +
-                        "(file_name text unique not null, " +
-                        "type integer not null, " +
-                        "article_id integer, " +
-                        "icon string unique, " +
-                        "modified integer)";
+                        "(id integer unique," +                 // メディアID
+                        "file_name text unique not null, " +    // ファイル名
+                        "type integer not null, " +             // メディアタイプ
+                        "article_id integer, " +                // アーティクルID
+                        "icon string unique, " +                //  アイコンの画像パス
+                        "modified integer," +                   // 更新日時
+                        "tag_name integer not null," +          // タグ名
+                        "sort_id integer unique not null" +     // 順番自由変更
+                        "favorite_flag bool not null )";        // 栞
                 db.execSQL(sql);
 
                 // カテゴリーとメディアの関係ビュー
@@ -153,7 +163,7 @@ public class SawaraDBAdapter{
                 // ArticleTable
                 String[] artName = {"ふつうしゃ", "けい", "イギリスのバス"};
                 String[] artDesc = {"ふつうのおおきさのくるま", "ちいさいくるま", "にかいだてのバス"};
-                String[][] paths = {
+                        String[][] paths = {
                         {"legacy.jpg", "legacy2.jpg"},
                         {"r1.jpg"},
                         {"buss.mp4"}
