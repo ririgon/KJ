@@ -132,10 +132,10 @@ public class SawaraDBAdapter{
                         "type integer not null, " +             // メディアタイプ
                         "article_id integer, " +                // アーティクルID
                         "icon string unique, " +                //  アイコンの画像パス
-                        "modified integer," +                   // 更新日時
-                        "tag_name integer not null," +          // タグ名
-                        "sort_id integer unique not null" +     // 順番自由変更
-                        "favorite_flag bool not null )";        // 栞
+                        "modified integer)";                    // 更新日時
+                        //"tag_name integer not null," +          // タグ名
+                        //"sort_id integer unique not null," +     // 順番自由変更
+                        //"favorite_flag bool not null )";        // 栞
                 db.execSQL(sql);
 
                 // カテゴリーとメディアの関係ビュー
