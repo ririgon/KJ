@@ -43,13 +43,13 @@ public class MainActivity extends Activity implements View.OnClickListener{
         final Calendar calendar = Calendar.getInstance();
         final int month = calendar.get(Calendar.MONTH);
 
-        if(month >= 3 && month <= 6){
+        if(month >= 3 && month < 6){
             season = 1 ;
-        }else if(month >= 6 && month <= 9){
+        }else if(month >= 6 && month < 9){
             season = 2 ;
-        }else if(month >= 9 && month <= 12){
+        }else if(month >= 9 && month < 12){
             season = 3 ;
-        }else if(month >= 12 && month <= 3){
+        }else if(month >= 12 && month < 3){
             season = 4 ;
         }
 
