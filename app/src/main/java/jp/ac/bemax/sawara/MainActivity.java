@@ -11,6 +11,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 
+import java.util.Calendar;
+
 /**
  * Created by Katuya on 2015/09/08.
  */
@@ -38,7 +40,18 @@ public class MainActivity extends Activity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        final Calendar calendar = Calendar.getInstance();
+        final int month = calendar.get(Calendar.MONTH);
 
+        if(month >= 3 && month <= 6){
+            season = 1 ;
+        }else if(month >= 6 && month <= 9){
+            season = 2 ;
+        }else if(month >= 9 && month <= 12){
+            season = 3 ;
+        }else if(month >= 12 && month <= 3){
+            season = 4 ;
+        }
 
         switch (season){
             case 1 : setContentView(R.layout.home_spring);
@@ -51,7 +64,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 break;
 
         }
-        setContentView(R.layout.home_winter);
+
         // ディスプレイサイズを取得する
         WindowManager windowManager = getWindowManager();
         Point displaySize = new Point();
