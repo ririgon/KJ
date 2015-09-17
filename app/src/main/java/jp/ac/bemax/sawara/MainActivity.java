@@ -38,7 +38,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        
+
 
         switch (season){
             case 1 : setContentView(R.layout.home_spring);
@@ -83,18 +83,22 @@ public class MainActivity extends Activity implements View.OnClickListener{
     }
 
     public void onClick(View v) {
+        //プロフィールを押した場合
         if(v == icon){
             Intent intent = new Intent();
             intent.setClass(getApplicationContext(), SplashActivity.class);
             startActivity(intent);}
+        //カメラを押した場合
         if(v == camera){
             Intent intent = new Intent();
             intent.setClass(getApplicationContext(), SplashActivity.class);
             startActivity(intent);}
+        //ビデオを押した場合
         if(v == video){
             Intent intent = new Intent();
             intent.setClass(getApplicationContext(), SplashActivity.class);
             startActivity(intent);}
+        //バーを押した場合
         if(v == ber){
             Intent intent = new Intent();
             intent.setClass(getApplicationContext(), SplashActivity.class);
