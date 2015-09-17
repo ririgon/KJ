@@ -33,10 +33,24 @@ public class MainActivity extends Activity implements View.OnClickListener{
     View video;
     View ber;
 
+    int season = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        
+
+        switch (season){
+            case 1 : setContentView(R.layout.home_spring);
+                    break;
+            case 2 : setContentView(R.layout.home_summer);
+                break;
+            case 3 : setContentView(R.layout.home_fall);
+                break;
+            case 4 : setContentView(R.layout.home_winter);
+                break;
+
+        }
         setContentView(R.layout.home_winter);
         // ディスプレイサイズを取得する
         WindowManager windowManager = getWindowManager();

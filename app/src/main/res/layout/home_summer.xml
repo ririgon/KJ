@@ -7,12 +7,12 @@
     android:paddingLeft="5dp"
     android:paddingRight="5dp"
     android:paddingTop="5dp"
-    android:background="@drawable/spring"
+    android:background="@drawable/summer"
     tools:context="jp.ac.bemax.sawara.MainActivity"   >
 
     <ImageButton
         android:src="@drawable/profile"
-        android:background="#7de27e"
+        android:background="#ff653e"
         android:layout_height="60dp"
         android:layout_width="60dp"
         android:scaleType="fitCenter"
@@ -34,7 +34,7 @@
 
     <ImageButton
         android:src="@drawable/sort_off"
-        android:background="#7de27e"
+        android:background="#ff653e"
         android:layout_height="30dp"
         android:layout_width="120dp"
         android:scaleType="fitCenter"
@@ -47,7 +47,7 @@
 
     <ImageButton
         android:src="@drawable/camera"
-        android:background="#7de27e"
+        android:background="#ff653e"
         android:layout_height="50dp"
         android:layout_width="50dp"
         android:scaleType="fitCenter"
@@ -58,7 +58,7 @@
         android:layout_toStartOf="@+id/video" />
     <ImageButton
         android:src="@drawable/video"
-        android:background="#7de27e"
+        android:background="#ff653e"
         android:layout_height="50dp"
         android:layout_width="50dp"
         android:scaleType="fitCenter"
@@ -69,7 +69,7 @@
         android:layout_toStartOf="@+id/ber" />
     <ImageButton
         android:src="@drawable/menu"
-        android:background="#7de27e"
+        android:background="#ff653e"
         android:layout_height="60dp"
         android:layout_width="60dp"
         android:scaleType="fitCenter"
