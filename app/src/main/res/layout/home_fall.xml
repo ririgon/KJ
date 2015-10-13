@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="5dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp"
+    android:background="@drawable/fall"
+    tools:context="jp.ac.bemax.sawara.MainActivity"   >
+
+    <ImageButton
+        android:src="@drawable/profile"
+        android:background="#ff0000"
+        android:layout_height="60dp"
+        android:layout_width="60dp"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="15dp"
+        android:adjustViewBounds="true"
+        android:id="@+id/icon"
+        />
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:textSize="30sp"
+        android:text="お名前"
+        android:layout_marginStart="32dp"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:layout_toEndOf="@+id/icon" />
+
+    <ImageButton
+        android:src="@drawable/sort_off"
+        android:background="#ff0000"
+        android:layout_height="30dp"
+        android:layout_width="120dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:id="@+id/sort"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:layout_alignBottom="@+id/name"
+        android:layout_toEndOf="@+id/name" />
+
+    <ImageButton
+        android:src="@drawable/camera"
+        android:background="#ff0000"
+        android:layout_height="50dp"
+        android:layout_width="50dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:id="@+id/camera"
+        android:layout_marginEnd="25dp"
+        android:layout_alignTop="@+id/video"
+        android:layout_toStartOf="@+id/video" />
+    <ImageButton
+        android:src="@drawable/video"
+        android:background="#ff0000"
+        android:layout_height="50dp"
+        android:layout_width="50dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:id="@+id/video"
+        android:layout_marginEnd="25dp"
+        android:layout_alignTop="@+id/ber"
+        android:layout_toStartOf="@+id/ber" />
+    <ImageButton
+        android:src="@drawable/menu"
+        android:background="#ff0000"
+        android:layout_height="60dp"
+        android:layout_width="60dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:id="@+id/ber"
+        android:layout_alignTop="@+id/icon"
+        android:layout_alignParentEnd="true" />
+
+</LinearLayout>
