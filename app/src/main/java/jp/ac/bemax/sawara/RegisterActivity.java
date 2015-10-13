@@ -30,6 +30,7 @@ import android.widget.Button;
 import android.widget.GridView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
+import android.os.Bundle;
 
 /**
  * @author horikawa
@@ -95,6 +96,8 @@ public class RegisterActivity extends Activity implements OnClickListener, OnIte
 	static Configuration conf;
 	
 	private int mode;
+
+	private Bundle bundle = new Bundle();
 	
 	/* (非 Javadoc)
 	 * @see android.app.Activity#onCreate(android.os.Bundle)
@@ -404,7 +407,11 @@ public class RegisterActivity extends Activity implements OnClickListener, OnIte
             mediaFile = new File(getExternalFilesDir(Environment.DIRECTORY_PICTURES), fileName);
 			Uri imageUri = Uri.fromFile(mediaFile);
 
-			CameraSample cs = new CameraSample(imageUri);
+			CameraEx Camera = new CameraEx();
+			Camera.onCreate(bundle);
+
+			//p461
+			//このcase分をベースにしてビューをサンプルに作る。
 
 //			// ** 写真撮影用の暗黙インテントを呼び出す準備 **
 //			intent.setAction(MediaStore.ACTION_IMAGE_CAPTURE);
